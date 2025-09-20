@@ -36,6 +36,7 @@ datos = [[Edad, videojuego,Plataforma,Sexo,Consumidor_habitual]]
 data = pd.DataFrame(datos, columns=['Edad', 'videojuego','Plataforma','Sexo','Consumidor_habitual']) #Dataframe con los mismos nombres de variables
 
 #En despliegue drop_first= False
+data_preparada=data.copy()
 data_preparada = pd.get_dummies(data_preparada, columns=['videojuego', 'Plataforma','Sexo', 'Consumidor_habitual'], drop_first=False, dtype=int)
 data_preparada.head()
 
